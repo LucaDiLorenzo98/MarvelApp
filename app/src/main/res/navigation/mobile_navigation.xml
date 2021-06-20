@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/nav_characters"
-        android:name="com.lucadilorenzo.marvelapp.ui.gallery.GalleryFragment"
+        android:name="com.lucadilorenzo.marvelapp.ui.characters.CharactersFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_creators"
-        android:name="com.lucadilorenzo.marvelapp.ui.slideshow.SlideshowFragment"
+        android:name="com.lucadilorenzo.marvelapp.ui.creators.CreatorsFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>
