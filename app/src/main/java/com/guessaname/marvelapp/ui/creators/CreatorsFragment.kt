@@ -1,4 +1,4 @@
-package com.lucadilorenzo.marvelapp.ui.characters
+package com.guessaname.marvelapp.ui.creators
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,12 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.lucadilorenzo.marvelapp.databinding.FragmentGalleryBinding
+import com.guessaname.marvelapp.databinding.FragmentSlideshowBinding
 
-class CharactersFragment : Fragment() {
+class CreatorsFragment : Fragment() {
 
-    private lateinit var galleryViewModel: CharactersViewModel
-    private var _binding: FragmentGalleryBinding? = null
+    private lateinit var slideshowViewModel: CreatorsViewModel
+    private var _binding: FragmentSlideshowBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,14 +24,14 @@ class CharactersFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        galleryViewModel =
-            ViewModelProvider(this).get(CharactersViewModel::class.java)
+        slideshowViewModel =
+            ViewModelProvider(this).get(CreatorsViewModel::class.java)
 
-        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textGallery
-        galleryViewModel.text.observe(viewLifecycleOwner, Observer {
+        val textView: TextView = binding.textSlideshow
+        slideshowViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

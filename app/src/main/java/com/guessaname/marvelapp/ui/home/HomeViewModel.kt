@@ -1,13 +1,13 @@
-package com.lucadilorenzo.marvelapp.ui.characters
+package com.guessaname.marvelapp.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class CharactersViewModel : ViewModel() {
+class HomeViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is gallery Fragment"
+        value = "Home"
     }
     val text: LiveData<String> = _text
 }

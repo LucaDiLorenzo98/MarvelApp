@@ -1,4 +1,4 @@
-package com.lucadilorenzo.marvelapp
+package com.guessaname.marvelapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

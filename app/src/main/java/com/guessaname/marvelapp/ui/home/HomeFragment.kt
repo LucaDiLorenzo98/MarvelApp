@@ -1,4 +1,4 @@
-package com.lucadilorenzo.marvelapp.ui.home
+package com.guessaname.marvelapp.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.lucadilorenzo.marvelapp.databinding.FragmentHomeBinding
+import com.guessaname.marvelapp.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 

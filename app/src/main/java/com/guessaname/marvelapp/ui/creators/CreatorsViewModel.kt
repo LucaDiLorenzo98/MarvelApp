@@ -1,4 +1,4 @@
-package com.lucadilorenzo.marvelapp.ui.creators
+package com.guessaname.marvelapp.ui.creators
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
