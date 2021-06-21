@@ -1,19 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:context=".ui.home.HomeFragment">
+
+        <ImageView
+            android:id="@+id/img_character"
+            android:layout_width="match_parent"
+            android:layout_height="478dp"
+            android:src="@drawable/x6fbccn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name_character"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:hint="character_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_bio_character"
+            app:layout_constraintStart_toStartOf="@id/img_character" />
+
+        <TextView
+            android:id="@+id/tv_bio_character"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="24dp"
+            android:hint="character_short_bio"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/img_character"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/img_character" />
+
+        <TextView
+            android:id="@+id/tv_favorites"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="Favorites"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/marvelRed"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="@id/img_character"
+            app:layout_constraintTop_toBottomOf="@+id/img_character" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal_scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="64dp"
+            app:layout_constraintStart_toStartOf="@id/img_character"
+            app:layout_constraintTop_toBottomOf="@id/img_character">
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="478dp"
-        android:src="@drawable/x6fbccn"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/img_character1"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:src="@drawable/x6fbccn"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/img_character2"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:src="@drawable/x6fbccn"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/img_character3"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:src="@drawable/x6fbccn"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:id="@+id/tv_about"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Created by GuessAName"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/marvelRed"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/img_character"
+            app:layout_constraintTop_toBottomOf="@+id/horizontal_scroll" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
