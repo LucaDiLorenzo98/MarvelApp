@@ -101,4 +101,10 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="prova">prova</string>
+    <string name="sonoqui">null</string>
+    <string name="nome">Nome</string>
+    <string name="wow">wow</string>
+    <string name="isi">isi</string>
+    <string name="kategori">kategori</string>
+    <string name="kode">kode</string>
 </resources>
